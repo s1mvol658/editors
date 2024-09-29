@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            align-items: left; /* Центрируем элементы по горизонтали */
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            width: 100%; /* Занимает 100% ширины родителя */
+            max-width: 400px; /* Максимальная ширина элемента */
+            height: 200px; /* Фиксированная высота */
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%; /* Занимает всю доступную высоту */
+            object-fit: cover; /* Сохраняет пропорции при заполнении контейнера */
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Увеличение изображения при наведении */
+        }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px;
+            text-align: center;
+            visibility: hidden; /* Скрываем по умолчанию */
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s linear; /* Плавный переход */
+        }
+        .gallery-item:hover figcaption {
+            visibility: visible; /* Показываем при наведении */
+            opacity: 1; /* Делаем видимым */
+        }
+	.sidebar {
+            width: 300px; 
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            margin-left: 20px; /* Отступ слева */
+            flex-shrink: 0; /* Запрещаем изменение размера */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Вертикальное расположение на узких экранах */
+            }
+            .sidebar {
+                width: 100%; /* Сайдбар занимает всю ширину */
+                margin-left: 0; /* Убираем левый отступ */
+                margin-top: 20px; /* Добавляем верхний отступ */
+            }
+        }
+
+	.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: green;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black; /* Цвет текста в выпадающем меню */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+	}
+	.pagination-container {
+        	display: flex; /* Используем flexbox для центрирования */
+        	justify-content: center; /* Центрируем содержимое по горизонтали */
+        	margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
+    	}
+
+    	.pagination {
+        	display: flex; /* Используем flexbox для горизонтального расположения */
+        	list-style-type: none; /* Убираем стандартные маркеры списка */
+        	padding: 0; /* Убираем отступы по умолчанию */
+        	margin: 0; /* Убираем внешние отступы */
+    	}
+    
+    	.pagination li {
+        	margin: 0 5px; /* Отступ между элементами списка */
+    	}
+
+    	.pagination a {
+        	text-decoration: none; /* Убираем подчеркивание ссылок */
+        	padding: 8px 12px; /* Добавляем внутренние отступы */
+        	border: 1px solid #ddd; /* Добавляем рамку */
+        	color: #007BFF; /* Цвет текста */
+        	transition: background-color 0.3s; /* Плавный переход для фона при наведении */
+    	}
+
+    	.pagination a:hover {
+        	background-color: #f0f0f0; /* Цвет фона при наведении */
+    	}
+
+    	.active a {
+        	background-color: #007BFF; /* Фоновый цвет для активной страницы */
+        	color: white; /* Цвет текста для активной ссылки */
+        	border: 1px solid #007BFF; /* Рамка для активной страницы */
+    	}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Галерея</h1>
+    <p>Здесь вы можете увидеть изображения различных подсветок выбранных редакторов кода.</p>
+    <div class="gallery">
+	<h2>VS Code</h2>
+        <figure class="gallery-item">
+            <img src="vscode.jpg" alt="Подсветка синтаксиса VS Code">
+            <figcaption>Подсветка синтаксиса VS Code</figcaption>
+        </figure>
+	<h2>Brackets</h2>
+        <figure class="gallery-item">
+            <img src="brackets.jpg" alt="Подсветка синтаксиса Brackets">
+            <figcaption>Подсветка синтаксиса Brackets</figcaption>
+        </figure>
+	<h2>Sublime text</h2>
+        <figure class="gallery-item">
+            <img src="sublime.jpg" alt="Подсветка синтаксиса Sublime Text">
+            <figcaption>Подсветка синтаксиса Sublime Text</figcaption>
+        </figure>
+	<h2>Notepad++</h2>
+        <figure class="gallery-item">
+            <img src="notepad++.jpg" alt="Подсветка синтаксиса Notepad++">
+            <figcaption>Подсветка синтаксиса Notepad++</figcaption>
+        </figure>
+	<h2>Vim</h2>
+        <figure class="gallery-item">
+            <img src="vim.jpg" alt="Подсветка синтаксиса Vim">
+            <figcaption>Подсветка синтаксиса Vim</figcaption>
+        </figure>
+    </div>
+</div>
+
+<aside class="sidebar">
+        <h2>Переход по сайту</h2>
+        <div class="container">
+        <ul class="navbar-menu">
+            <li><a href=" index.html">1. Добро пожаловать</a></li>
+            <li><a href="about.html">2. Вступление</a></li>
+            <li class="dropdown">
+                <a href="editors.html">3. Редакторы</a>
+                <div class="dropdown-content">
+                    <a href="vscode.html">VS Code</a>
+                    <a href="sublime.html">Sublime Text</a>
+                    <a href="brackets.html">Brackets</a>
+                    <a href="vim.html">Vim</a>
+                    <a href="notepad++.html">Notepad++</a>
+                </div>
+            </li>
+            <li><a href="plugins.html">4. Плагины</a></li>
+            <li><a href="gallery.html">5. Галерея</a></li>
+            <li><a href="contact.html">6. Контакты</a></li>
+        </ul>
+    </div>
+        </ul>
+    </aside>
+</div>
+
+ <div class="pagination-container">
+    <ul class="pagination">
+        <li><a href=" index.html">1</a></li>
+        <li><a href="about.html" class="active">2</a></li>
+        <li><a href="editors.html">3</a></li>
+        <li><a href="plugins.html">4</a></li>
+        <li><a href="gallery.html">5</a></li>
+	<li><a href="contact.html">6</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+</body>
+</html>

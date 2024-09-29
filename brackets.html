@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brackets</title>
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+	 	.sidebar {
+            width: 300px; 
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            margin-left: 20px; /* Отступ слева */
+            flex-shrink: 0; /* Запрещаем изменение размера */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Вертикальное расположение на узких экранах */
+            }
+            .sidebar {
+                width: 100%; /* Сайдбар занимает всю ширину */
+                margin-left: 0; /* Убираем левый отступ */
+                margin-top: 20px; /* Добавляем верхний отступ */
+            }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Brackets</h1>
+    <p>Brackets — это открытый текстовый редактор, разработанный Adobe Systems для веб-разработчиков. Он ориентирован на работу с HTML, CSS и JavaScript.</p>
+    <h2>Основные особенности:</h2>
+    <ul>
+        <li>Интерактивные инструменты для веб-разработки</li>
+    <li>Предпросмотр в реальном времени</li>
+    <li>Поддержка расширений и плагинов</li>
+    <li>Интуитивно понятный интерфейс и удобная навигация</li>
+    </ul>
+    <h2>Установка:</h2>
+    <p>Brackets можно скачать с официального сайта <a href="http://brackets.io">brackets.io</a>. Редактор доступен для Windows, macOS и Linux.</p>
+    <h2>Советы по использованию:</h2>
+    <ul>
+        <li>Используйте горячие клавиши для быстрого доступа к функциям.</li>
+        <li>Настройте свои любимые расширения для повышения производительности.</li>
+        <li>Изучите возможности интеграции с Git для управления версиями.</li>
+    </ul>
+</div>
+
+<aside class="sidebar">
+        <h2>Переход по сайту</h2>
+        <div class="container">
+        <ul class="navbar-menu">
+            <li><a href=" index.html">Домашняя страница</a></li>
+            <li><a href="vscode.html">VS Code подробнее</a></li>
+            <li><a href="sublime.html">Sublime Text подробнее</a></li>
+            <li><a href="brackets.html">Brackets подробнее</a></li>
+            <li><a href="vim.html">Vim подробнее</a></li>
+            <li><a href="notepad++.html">Notepad++ подробнее</a></li>
+        </ul>
+    </div>
+        </ul>
+    </aside>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+
+</body>
+</html>

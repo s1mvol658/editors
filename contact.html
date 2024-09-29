@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Вертикальная компоновка */
+            min-height: 100vh; /* Минимальная высота - 100% высоты экрана */
+        }
+
+        .sidebar {
+            width: 250px; /* Ширина боковой панели */
+            padding: 15px;
+            background-color: #f4f4f4;
+        }
+
+        .main-content {
+            flex-grow: 1; /* Основной контент займет оставшееся пространство */
+            padding: 15px;
+        }
+
+        .navbar-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin-bottom: 10px;
+        }
+
+        .dropdown-content {
+            padding-left: 20px; /* Отступ для выпадающего списка */
+            display: none; /* Скрыть выпадающий список по умолчанию */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block; /* Показывать выпадающий список при наведении */
+        }
+
+        .pagination-container {
+            display: flex; /* Используем flexbox для центрирования */
+            justify-content: center; /* Центрируем содержимое по горизонтали */
+            margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
+        }
+
+        .pagination {
+            display: flex; /* Используем flexbox для горизонтального расположения */
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding: 0; /* Убираем отступы по умолчанию */
+            margin: 0; /* Убираем внешние отступы */
+        }
+
+        .pagination li {
+            margin: 0 5px; /* Отступ между элементами списка */
+        }
+
+        .pagination a {
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+            padding: 8px 12px; /* Добавляем внутренние отступы */
+            border: 1px solid #ddd; /* Добавляем рамку */
+            color: #007BFF; /* Цвет текста */
+            transition: background-color 0.3s; /* Плавный переход для фона при наведении */
+        }
+
+        .pagination a:hover {
+            background-color: #f0f0f0; /* Цвет фона при наведении */
+        }
+
+        .active a {
+            background-color: #007BFF; /* Фоновый цвет для активной страницы */
+            color: white; /* Цвет текста для активной ссылки */
+            border: 1px solid #007BFF; /* Рамка для активной страницы */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%; /* Полная ширина боковой панели */
+            }
+
+            .main-content {
+                width: 100%; /* Полная ширина основного контента */
+            }
+        }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2>Переход по сайту</h2>
+    <div class="container">
+        <ul class="navbar-menu">
+            <li><a href=" index.html">1. Добро пожаловать</a></li>
+            <li><a href="about.html">2. Вступление</a></li>
+            <li class="dropdown">
+                <a href="editors.html">3. Редакторы</a>
+                <div class="dropdown-content">
+                    <a href="vscode.html">VS Code</a>
+                    <a href="sublime.html">Sublime Text</a>
+                    <a href="brackets.html">Brackets</a>
+                     <a href="vim.html">Vim</a>
+                    <a href="notepad++.html">Notepad++</a>
+                </div>
+            </li>
+            <li><a href="plugins.html">4. Плагины</a></li>
+            <li><a href="gallery.html">5. Галерея</a></li>
+            <li><a href="contact.html">6. Контакты</a></li>
+        </ul>
+    </div>
+</aside>
+
+<div class="main-content">
+    <div class="container">
+        <h1>Контактная информация</h1>
+        <p><strong>Название компании:</strong> Ваша Компания</p>
+        <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
+        <p><strong>Электронная почта:</strong> info@yourcompany.ru</p>
+        <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+    
+        <div class="pagination-container">
+            <ul class="pagination">
+                <li><a href=" index.html">1</a></li>
+                <li><a href="about.html" class="active">2</a></li>
+                <li><a href="editors.html">3</a></li>
+                <li><a href="plugins.html">4</a></li>
+                <li><a href="gallery.html">5</a></li>
+                <li><a href="contact.html">6</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+
+</body>
+</html>

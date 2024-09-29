@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редакторы - Редакторы с Подсветкой Кода</title>
+   <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+
+        .container {
+            display: flex; /* Используем flexbox для размещения контента */
+            flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+        }
+
+        .content {
+            flex: 1; /* Контент занимает оставшееся место */
+            padding: 20px;
+            min-width: 300px; /* Минимальная ширина для контента */
+        }
+
+        .sidebar {
+            width: 300px; 
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            margin-left: 20px; /* Отступ слева */
+            flex-shrink: 0; /* Запрещаем изменение размера */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Вертикальное расположение на узких экранах */
+            }
+            .sidebar {
+                width: 100%; /* Сайдбар занимает всю ширину */
+                margin-left: 0; /* Убираем левый отступ */
+                margin-top: 20px; /* Добавляем верхний отступ */
+            }
+        }
+
+        .pagination-container {
+            display: flex; /* Используем flexbox для центрирования */
+            justify-content: center; /* Центрируем содержимое по горизонтали */
+            margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
+        }
+
+        .pagination {
+            display: flex; /* Используем flexbox для горизонтального расположения */
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding: 0; /* Убираем отступы по умолчанию */
+            margin: 0; /* Убираем внешние отступы */
+        }
+
+        .pagination li {
+            margin: 0 5px; /* Отступ между элементами списка */
+        }
+
+        .pagination a {
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+            padding: 8px 12px; /* Добавляем внутренние отступы */
+            border: 1px solid #ddd; /* Добавляем рамку */
+            color: #007BFF; /* Цвет текста */
+            transition: background-color 0.3s; /* Плавный переход для фона при наведении */
+        }
+
+        .pagination a:hover {
+            background-color: #f0f0f0; /* Цвет фона при наведении */
+        }
+
+        .active a {
+            background-color: #007BFF; /* Фоновый цвет для активной страницы */
+            color: white; /* Цвет текста для активной ссылки */
+            border: 1px solid #007BFF; /* Рамка для активной страницы */
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Кратко о выбранных редакторах</h1>
+    <p>Вот несколько популярных редакторов с подсветкой синтаксиса:</p>
+    <ul>
+        <li><strong>Visual Studio Code:</strong> Мощный редактор с множеством расширений.</li>
+        <li><strong>Sublime Text:</strong> Легкий и быстрый редактор с простым интерфейсом.</li>
+        <li><strong>Vim:</strong> мощный текстовый редактор, который изначально был создан для Unix.</li>
+	<li><strong>Notepad++:</strong> бесплатный текстовый редактор, который поддерживает множество языков программирования.</li>
+	<li><strong>Brackets:</strong> открытый текстовый редактор, разработанный Adobe Systems для веб-разработчиков.</li>
+    </ul>
+</div>
+    <aside class="sidebar">
+        <h2>Переход по сайту</h2>
+        <div class="container">
+        <ul class="navbar-menu">
+            <li><a href="vscode.html">VS Code подробнее</a></li>
+            <li><a href="sublime.html">Sublime Text подробнее</a></li>
+            <li><a href="brackets.html">Brackets подробнее</a></li>
+            <li><a href="vim.html">Vim подробнее</a></li>
+            <li><a href="notepad++.html">Notepad++ подробнее</a></li>
+        </ul>
+    </div>
+        </ul>
+    </aside>
+</div>
+
+ <div class="pagination-container">
+    <ul class="pagination">
+        <li><a href=" index.html">1</a></li>
+        <li><a href="about.html" class="active">2</a></li>
+        <li><a href="editors.html">3</a></li>
+        <li><a href="plugins.html">4</a></li>
+        <li><a href="gallery.html">5</a></li>
+	<li><a href="contact.html">6</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+
+</body>
+</html>

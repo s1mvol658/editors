@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code</title>
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+	 	.sidebar {
+            width: 300px; 
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            margin-left: 20px; /* Отступ слева */
+            flex-shrink: 0; /* Запрещаем изменение размера */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Вертикальное расположение на узких экранах */
+            }
+            .sidebar {
+                width: 100%; /* Сайдбар занимает всю ширину */
+                margin-left: 0; /* Убираем левый отступ */
+                margin-top: 20px; /* Добавляем верхний отступ */
+            
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Visual Studio Code</h1>
+    <p>Visual Studio Code (VS Code) — это бесплатный редактор исходного кода, разработанный Microsoft. Он поддерживает множество языков программирования и имеет богатый набор функций.</p>
+    <h2>Основные особенности:</h2>
+    <ul>
+        <li>Подсветка синтаксиса</li>
+        <li>Интеграция с Git</li>
+        <li>Расширяемость через плагины</li>
+        <li>Отладка в реальном времени</li>
+    </ul>
+</div>
+
+<aside class="sidebar">
+        <h2>Переход по сайту</h2>
+        <div class="container">
+        <ul class="navbar-menu">
+	    <li><a href=" index.html">Домашняя страница</a></li>
+            <li><a href="vscode.html">VS Code подробнее</a></li>
+            <li><a href="sublime.html">Sublime Text подробнее</a></li>
+            <li><a href="brackets.html">Brackets подробнее</a></li>
+            <li><a href="vim.html">Vim подробнее</a></li>
+            <li><a href="notepad++.html">Notepad++ подробнее</a></li>
+        </ul>
+    </div>
+        </ul>
+    </aside>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вступление - Редакторы с Подсветкой Кода</title>
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+	.video-container {
+        display: flex;
+        align-items: flex-start; /* Выравнивание по верху */
+    }
+
+    iframe {
+        width: 70%; /* Ширина видео 70% */
+        height: 400px; /* Высота видео */
+        margin-right: 20px; /* Отступ справа от видео */
+    }
+
+    .sidebar {
+        width: 25%; /* Ширина сайдбара 25% */
+    }
+
+    .navbar-menu {
+        list-style-type: none; /* Убираем маркеры списка */
+        padding: 0; /* Убираем отступы */
+    }
+
+    .navbar-menu li {
+        margin: 10px 0; /* Отступ между пунктами */
+    }
+        .content {
+            margin-right: 320px; /* Отступ для сайдбара */
+            padding: 20px;
+        }
+        .editor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                margin-right: 0; /* Убираем отступ для мобильных устройств */
+            }
+            .sidebar {
+                width: 100%; /* Сайдбар на всю ширину для мобильных устройств */
+                float: none; /* Убираем float для правильного отображения */
+            }
+        }
+	.pagination-container {
+        display: flex; /* Используем flexbox для центрирования */
+        justify-content: center; /* Центрируем содержимое по горизонтали */
+        margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
+    }
+
+    .pagination {
+        display: flex; /* Используем flexbox для горизонтального расположения */
+        list-style-type: none; /* Убираем стандартные маркеры списка */
+        padding: 0; /* Убираем отступы по умолчанию */
+        margin: 0; /* Убираем внешние отступы */
+    }
+    
+    .pagination li {
+        margin: 0 5px; /* Отступ между элементами списка */
+    }
+
+    .pagination a {
+        text-decoration: none; /* Убираем подчеркивание ссылок */
+        padding: 8px 12px; /* Добавляем внутренние отступы */
+        border: 1px solid #ddd; /* Добавляем рамку */
+        color: #007BFF; /* Цвет текста */
+        transition: background-color 0.3s; /* Плавный переход для фона при наведении */
+    }
+
+    .pagination a:hover {
+        background-color: #f0f0f0; /* Цвет фона при наведении */
+    }
+
+    .active a {
+        background-color: #007BFF; /* Фоновый цвет для активной страницы */
+        color: white; /* Цвет текста для активной ссылки */
+        border: 1px solid #007BFF; /* Рамка для активной страницы */
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+        <h1>Вступление</h1>
+        <p>Мы предоставляем информацию о лучших редакторах кода, их особенностях и преимуществах. Наши редакторы поддерживают подсветку синтаксиса, автозаполнение кода и другие функции, которые делают процесс программирования более удобным и эффективным.</p>
+        
+        <h2>Рассматриваемые редакторы</h2>
+        <div class="editor-list">
+            <div class="editor-item">
+                <h3><a href="vscode.html">Visual Studio Code</a></h3>
+                <img src="vscodel.jpg" alt="Visual Studio Code" style="max-width: 100%; height: auto;">
+ <p>Это один из самых популярных редакторов кода, который предлагает обширный набор расширений и тем для настройки. Он поддерживает множество языков программирования и имеет встроенную поддержку Git.</p>
+            </div>
+            <div class="editor-item">
+                <h3><a href="sublime.html">Sublime Text</a></h3>
+                <img src="sublimel.jpg" alt="Sublime Text" style="max-width: 50%; height: auto;">
+                <p>Легкий и быстрый редактор кода с интуитивно понятным интерфейсом. Sublime Text поддерживает плагины и темы, а также предлагает мощные функции редактирования.</p>
+            </div>
+            <div class="editor-item">
+                <h3><a href="brackets.html">Brackets</a></h3>
+                <img src="bracketsl.jpg" alt="Brackets" style="max-width: 100%; height: auto;">
+                <p>Brackets — это редактор кода с открытым исходным кодом, разработанный специально для веб-разработчиков. Он предлагает функции, такие как живой просмотр, поддержка различных языков и интеграция с системами управления версиями.</p>
+            </div>
+            <div class="editor-item">
+                <h3><a href="vim.html">Vim</a></h3>
+                <img src="viml.jpg" alt="Vim" style="max-width: 50%; height: auto;">
+                <p>Vim — это мощный текстовый редактор, который широко используется программистами благодаря своей гибкости и настраиваемости. Он может показаться сложным для новичков, но предоставляет мощные инструменты для редактирования текста и навигации по файлам.</p>
+            </div>
+            <div class="editor-item">
+                <h3><a href="notepad++.html">Notepad++</a></h3>
+                <img src="n++l.jpg" alt="Notepad++" style="max-width: 50%; height: auto;">
+                <p>Notepad++ — это бесплатный редактор с открытым исходным кодом для Windows, который поддерживает множество языков программирования и предлагает функции подсветки синтаксиса, автозаполнения и макросов.</p>
+            </div>
+        </div>
+
+        <h2>Сравнительная таблица редакторов</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <th style="border: 1px solid #ddd; padding: 8px;">Редактор</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Платформа</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Поддержка языков</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">Visual Studio Code</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Windows, macOS, Linux</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Множество языков</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">Sublime Text</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Windows, macOS, Linux</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Множество языков</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">Brackets</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Windows, macOS, Linux</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">HTML, CSS, JavaScript</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">Vim</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Windows, macOS, Linux</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Множество языков</td>
+</tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">Notepad++</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Windows</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Множество языков</td>
+            </tr>
+        </table>
+
+        <h2>Обзор редактора в видео</h2>
+        <div class="video-container">
+    <iframe src="video.mp4" title="Обзор редактора кода" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+       
+    <aside class="sidebar">
+        <h2>Переход по сайту</h2>
+        <div class="container">
+        <ul class="navbar-menu">
+            <li><a href=" index.html">1. Добро пожаловать</a></li>
+            <li><a href="about.html">2. Вступление</a></li>
+            <li class="dropdown">
+                <a href="editors.html">3. Редакторы</a>
+                <div class="dropdown-content">
+                    <a href="vscode.html">VS Code</a>
+                    <a href="sublime.html">Sublime Text</a>
+                    <a href="brackets.html">Brackets</a>
+                    <a href="vim.html">Vim</a>
+                    <a href="notepad++.html">Notepad++</a>
+                </div>
+            </li>
+            <li><a href="plugins.html">4. Плагины</a></li>
+            <li><a href="gallery.html">5. Галерея</a></li>
+            <li><a href="contact.html">6. Контакты</a></li>
+        </ul>
+    </div>
+        </ul>
+    </aside>
+</div>
+
+ <div class="pagination-container">
+    <ul class="pagination">
+        <li><a href=" index.html">1</a></li>
+        <li><a href="about.html" class="active">2</a></li>
+        <li><a href="editors.html">3</a></li>
+        <li><a href="plugins.html">4</a></li>
+        <li><a href="gallery.html">5</a></li>
+	<li><a href="contact.html">6</a></li>
+    </ul>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
+    <p><a href="privacy.html">Политика конфиденциальности</a> | <a href="terms.html">Условия использования</a></p>
+</footer>
+
+</body>
+</html>
