@@ -18,20 +18,39 @@
             background-color: #f4f4f4;
             border-top: 1px solid #ddd;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .navbar {
+            background-color: green; /* Цвет фона для меню */
+        }
+        .navbar-menu {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем отступы */
+            margin: 0; /* Убираем внешние отступы */
+            display: flex; /* Используем flex для горизонтального выравнивания */
+            flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+        }
+        .navbar-menu li {
+            position: relative; /* Для подменю */
+        }
+        .navbar-menu li a {
+            color: white; /* Цвет текста ссылок */
+            padding: 15px 20px; /* Отступы вокруг текста */
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+            display: block; /* Делаем ссылки блочными элементами */
+            line-height: 1.5; /* Высота строки для равномерного выравнивания */
+        }
+        .navbar-menu li a:hover {
+            background-color: #495057; /* Цвет фона при наведении */
         }
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: green;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
         }
         .dropdown-content a {
-            color: black;
+            color: black; /* Цвет текста в выпадающем меню */
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -42,29 +61,60 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-	.video-container {
-        display: flex;
-        align-items: flex-start; /* Выравнивание по верху */
-    }
+        .video-container {
+            display: flex;
+            align-items: flex-start; /* Выравнивание по верху */
+        }
+        iframe {
+            width: 70%; /* Ширина видео 70% */
+            height: 400px; /* Высота видео */
+            margin-right: 20px; /* Отступ справа от видео */
+        }
+                .sidebar {
+    position: absolute;
+    top: 60px; /* Отступ сверху, чтобы не перекрывать меню */
+    right: 0;
+    width: 250px; /* Ширина сайдбара */
+    padding: 15px;
+    background-color: green; /* Цвет фона сайдбара */
+    border-left: 1px solid #ddd; /* Левая граница для разделения */
+    border-bottom: 1px solid #ddd; /* Нижняя граница для разделения */
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1); /* Тень для визуального отделения */
+    color: #000; /* Цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    line-height: 1.5; /* Высота строки для лучшей читаемости */
+}
 
-    iframe {
-        width: 70%; /* Ширина видео 70% */
-        height: 400px; /* Высота видео */
-        margin-right: 20px; /* Отступ справа от видео */
-    }
+.sidebar h2 {
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    font-size: 18px; /* Размер шрифта заголовка */
+    color: white; /* Цвет заголовка */
+}
 
-    .sidebar {
-        width: 25%; /* Ширина сайдбара 25% */
-    }
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
 
-    .navbar-menu {
-        list-style-type: none; /* Убираем маркеры списка */
-        padding: 0; /* Убираем отступы */
-    }
+.sidebar li {
+    margin-bottom: 10px; /* Отступ между пунктами */
+}
 
-    .navbar-menu li {
-        margin: 10px 0; /* Отступ между пунктами */
-    }
+.sidebar a {
+    color: #007BFF; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+        .navbar-menu {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем отступы */
+        }
+        .navbar-menu li {
+            margin: 10px 0; /* Отступ между пунктами */
+        }
         .content {
             margin-right: 320px; /* Отступ для сайдбара */
             padding: 20px;
@@ -83,43 +133,60 @@
                 float: none; /* Убираем float для правильного отображения */
             }
         }
-	.pagination-container {
-        display: flex; /* Используем flexbox для центрирования */
-        justify-content: center; /* Центрируем содержимое по горизонтали */
-        margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
-    }
-
-    .pagination {
-        display: flex; /* Используем flexbox для горизонтального расположения */
-        list-style-type: none; /* Убираем стандартные маркеры списка */
-        padding: 0; /* Убираем отступы по умолчанию */
-        margin: 0; /* Убираем внешние отступы */
-    }
-    
-    .pagination li {
-        margin: 0 5px; /* Отступ между элементами списка */
-    }
-
-    .pagination a {
-        text-decoration: none; /* Убираем подчеркивание ссылок */
-        padding: 8px 12px; /* Добавляем внутренние отступы */
-        border: 1px solid #ddd; /* Добавляем рамку */
-        color: #007BFF; /* Цвет текста */
-        transition: background-color 0.3s; /* Плавный переход для фона при наведении */
-    }
-
-    .pagination a:hover {
-        background-color: #f0f0f0; /* Цвет фона при наведении */
-    }
-
-    .active a {
-        background-color: #007BFF; /* Фоновый цвет для активной страницы */
-        color: white; /* Цвет текста для активной ссылки */
-        border: 1px solid #007BFF; /* Рамка для активной страницы */
-    }
+        .pagination-container {
+            display: flex; /* Используем flexbox для центрирования */
+            justify-content: center; /* Центрируем содержимое по горизонтали */
+            margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
+        }
+        .pagination {
+            display: flex; /* Используем flexbox для горизонтального расположения */
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding: 0; /* Убираем отступы по умолчанию */
+            margin: 0; /* Убираем внешние отступы */
+        }
+        .pagination li {
+            margin: 0 5px; /* Отступ между элементами списка */
+        }
+        .pagination a {
+            text-decoration: none; /* Убираем подчеркивание ссылок */
+            padding: 8px 12px; /* Добавляем внутренние отступы */
+            border: 1px solid #ddd; /* Добавляем рамку */
+            color: #007BFF; /* Цвет текста */
+            transition: background-color 0.3s; /* Плавный переход для фона при наведении */
+        }
+        .pagination a:hover {
+            background-color: #f0f0f0; /* Цвет фона при наведении */
+        }
+        .active a {
+            background-color: #007BFF; /* Фоновый цвет для активной страницы */
+            color: white; /* Цвет текста для активной ссылки */
+            border: 1px solid #007BFF; /* Рамка для активной страницы */
+        }
     </style>
 </head>
 <body>
+
+<nav class="navbar">
+    <div class="container">
+        <ul class="navbar-menu">
+            <li class="index-item"><a href="index.html">Добро пожаловать</a></li>
+            <li><a href="about.html">Вступление</a></li>
+            <li class="dropdown">
+                <a href="editors.html">Редакторы</a>
+                <div class="dropdown-content">
+                    <a href="vscode.html">VS Code</a>
+                    <a href="sublime.html">Sublime Text</a>
+                    <a href="brackets.html">Brackets</a>
+                    <a href="vim.html">Vim</a>
+                    <a href="notepad++.html">Notepad++</a>
+                </div>
+            </li>
+            <li><a href="plugins.html">Плагины</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
 
 <div class="container">
     <div class="content">
@@ -131,7 +198,7 @@
             <div class="editor-item">
                 <h3><a href="vscode.html">Visual Studio Code</a></h3>
                 <img src="vscodel.jpg" alt="Visual Studio Code" style="max-width: 100%; height: auto;">
- <p>Это один из самых популярных редакторов кода, который предлагает обширный набор расширений и тем для настройки. Он поддерживает множество языков программирования и имеет встроенную поддержку Git.</p>
+                <p>Это один из самых популярных редакторов кода, который предлагает обширный набор расширений и тем для настройки. Он поддерживает множество языков программирования и имеет встроенную поддержку Git.</p>
             </div>
             <div class="editor-item">
                 <h3><a href="sublime.html">Sublime Text</a></h3>
@@ -181,7 +248,7 @@
                 <td style="border: 1px solid #ddd; padding: 8px;">Vim</td>
                 <td style="border: 1px solid #ddd; padding: 8px;">Windows, macOS, Linux</td>
                 <td style="border: 1px solid #ddd; padding: 8px;">Множество языков</td>
-</tr>
+            </tr>
             <tr>
                 <td style="border: 1px solid #ddd; padding: 8px;">Notepad++</td>
                 <td style="border: 1px solid #ddd; padding: 8px;">Windows</td>
@@ -191,46 +258,44 @@
 
         <h2>Обзор редактора в видео</h2>
         <div class="video-container">
-    <iframe src="video.mp4" title="Обзор редактора кода" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-       
+            <iframe width="720" height="405" src="https://rutube.ru/play/embed/6924c956b4208e367eff246b7664a1f7/" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+    </div>
+
     <aside class="sidebar">
         <h2>Переход по сайту</h2>
         <div class="container">
-        <ul class="navbar-menu">
-            <li><a href=" index.html">1. Добро пожаловать</a></li>
-            <li><a href="about.html">2. Вступление</a></li>
-            <li class="dropdown">
-                <a href="editors.html">3. Редакторы</a>
-                <div class="dropdown-content">
-                    <a href="vscode.html">VS Code</a>
-                    <a href="sublime.html">Sublime Text</a>
-                    <a href="brackets.html">Brackets</a>
-                    <a href="vim.html">Vim</a>
-                    <a href="notepad++.html">Notepad++</a>
-                </div>
-            </li>
-            <li><a href="plugins.html">4. Плагины</a></li>
-            <li><a href="gallery.html">5. Галерея</a></li>
-            <li><a href="contact.html">6. Контакты</a></li>
-        </ul>
-    </div>
-        </ul>
+            <ul class="navbar-menu">
+                <li><a href="index.html">1. Добро пожаловать</a></li>
+                <li><a href="about.html">2. Вступление</a></li>
+                <li class="dropdown">
+                    <a href="editors.html">3. Редакторы</a>
+                    <div class="dropdown-content">
+                        <a href="vscode.html">VS Code</a>
+                        <a href="sublime.html">Sublime Text</a>
+                        <a href="brackets.html">Brackets</a>
+                        <a href="vim.html">Vim</a>
+                        <a href="notepad++.html">Notepad++</a>
+                    </div>
+                </li>
+                <li><a href="plugins.html">4. Плагины</a></li>
+                <li><a href="gallery.html">5. Галерея</a></li>
+                <li><a href="contact.html">6. Контакты</a></li>
+            </ul>
+        </div>
     </aside>
 </div>
 
- <div class="pagination-container">
+<div class="pagination-container">
     <ul class="pagination">
-        <li><a href=" index.html">1</a></li>
+        <li><a href="index.html">1</a></li>
         <li><a href="about.html" class="active">2</a></li>
         <li><a href="editors.html">3</a></li>
         <li><a href="plugins.html">4</a></li>
         <li><a href="gallery.html">5</a></li>
-	<li><a href="contact.html">6</a></li>
+        <li><a href="contact.html">6</a></li>
     </ul>
 </div>
-
 
 <footer>
     <p>&copy; 2023 Все права защищены(лично защищаю с мечом и щитом в руках). Редактор кода.</p>
