@@ -62,30 +62,20 @@
             text-align: center; /* Центрируем заголовок */
             margin-bottom: 20px; /* Добавляем отступ снизу */
         }
-
-        /* Дополнительные стили для улучшения визуального отображения */
-        . index-item a {
-            margin-top: 15px; /* Устанавливаем верхний отступ */
-            padding-top: 10px; /* Устанавливаем верхний внутренний отступ */
-            padding-bottom: 10px; /* Устанавливаем нижний внутренний отступ */
-        }
         .pagination-container {
             display: flex; /* Используем flexbox для центрирования */
             justify-content: center; /* Центрируем содержимое по горизонтали */
             margin-top: 20px; /* Отступ сверху для отдаления от других элементов */
         }
-
         .pagination {
             display: flex; /* Используем flexbox для горизонтального расположения */
             list-style-type: none; /* Убираем стандартные маркеры списка */
             padding: 0; /* Убираем отступы по умолчанию */
             margin: 0; /* Убираем внешние отступы */
         }
-    
         .pagination li {
             margin: 0 5px; /* Отступ между элементами списка */
         }
-
         .pagination a {
             text-decoration: none; /* Убираем подчеркивание ссылок */
             padding: 8px 12px; /* Добавляем внутренние отступы */
@@ -93,18 +83,14 @@
             color: #007BFF; /* Цвет текста */
             transition: background-color 0.3s; /* Плавный переход для фона при наведении */
         }
-
         .pagination a:hover {
             background-color: #f0f0f0; /* Цвет фона при наведении */
         }
-
         .active a {
             background-color: #007BFF; /* Фоновый цвет для активной страницы */
-            color: white;
-    	}
- }
-
-        /* Медиа-запрос для адаптации меню на мобильных устройствах */
+            color: white; /* Цвет текста для активной ссылки */
+            border: 1px solid #007BFF; /* Рамка для активной страницы */
+        }
         @media (max-width: 768px) {
             .navbar-menu {
                 flex-direction: column; /* Вертикальное расположение элементов меню */
@@ -116,25 +102,21 @@
         }
     </style>
 </head>
-
-</html>
-    </style>
-</head>
 <body>
 
 <nav class="navbar">
     <div class="container">
         <ul class="navbar-menu">
-            <li class=" index-item"><a href=" index.html">Добро пожаловать</a></li> 
+            <li class="index-item"><a href="index.html">Добро пожаловать</a></li>
             <li><a href="about.html">Вступление</a></li>
             <li class="dropdown">
                 <a href="editors.html">Редакторы</a>
                 <div class="dropdown-content">
-                    <a href="vscode.html">VS Code</a> 
-                    <a href="sublime.html">Sublime Text</a> 
-                    <a href="brackets.html">Brackets</a> 
-                    <a href="vim.html">Vim</a> 
-                    <a href="notepad++.html">Notepad++</a> 
+                    <a href="vscode.html">VS Code</a>
+                    <a href="sublime.html">Sublime Text</a>
+                    <a href="brackets.html">Brackets</a>
+                    <a href="vim.html">Vim</a>
+                    <a href="notepad++.html">Notepad++</a>
                 </div>
             </li>
             <li><a href="plugins.html">Плагины</a></li>
@@ -150,14 +132,14 @@
     <img src="logo.jpg" alt="" class="responsive">
 </div>
 
- <div class="pagination-container">
+<div class="pagination-container">
     <ul class="pagination">
-        <li><a href=" index.html">1</a></li>
-        <li><a href="about.html" class="active">2</a></li>
+        <li><a href="index.html" class="active">1</a></li>
+        <li><a href="about.html">2</a></li>
         <li><a href="editors.html">3</a></li>
         <li><a href="plugins.html">4</a></li>
         <li><a href="gallery.html">5</a></li>
-	<li><a href="contact.html">6</a></li>
+        <li><a href="contact.html">6</a></li>
     </ul>
 </div>
 
